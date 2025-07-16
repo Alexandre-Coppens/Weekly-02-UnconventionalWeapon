@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Engine">
+      <UniqueIdentifier>{a8e083c6-ad12-46db-b8d7-c244caafdbe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Engine">
+      <UniqueIdentifier>{427636f6-7b91-447a-9708-0a3e786f260b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Map Creator">
+      <UniqueIdentifier>{79578da3-c990-420a-810c-814283e39385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Map Creator">
+      <UniqueIdentifier>{d2e24482-a44a-42e5-9b04-02faf3cfbf2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Game">
+      <UniqueIdentifier>{21f56462-f93e-4458-9a92-f83848f69d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Game">
+      <UniqueIdentifier>{74b70461-fd02-4a3f-8cef-b15dc912e97f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="0-Engine\Actor.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="0-Engine\AssetList.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="1-Map Creator\Cursor.cpp">
+      <Filter>Fichiers sources\Map Creator</Filter>
+    </ClCompile>
+    <ClCompile Include="1-Map Creator\M_Engine.cpp">
+      <Filter>Fichiers sources\Map Creator</Filter>
+    </ClCompile>
+    <ClCompile Include="0-Engine\Terrain.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="1-Map Creator\UI_TilesMenu.cpp">
+      <Filter>Fichiers sources\Map Creator</Filter>
+    </ClCompile>
+    <ClCompile Include="1-Map Creator\AnimationTest.cpp">
+      <Filter>Fichiers sources\Map Creator</Filter>
+    </ClCompile>
+    <ClCompile Include="1-Map Creator\main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="2-Game\G_Engine.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="0-Engine\Actor.h">
+      <Filter>Fichiers de ressources\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="0-Engine\ActorIncludes.h">
+      <Filter>Fichiers de ressources\Map Creator</Filter>
+    </ClInclude>
+    <ClInclude Include="0-Engine\AssetList.h">
+      <Filter>Fichiers de ressources\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="1-Map Creator\Cursor.h">
+      <Filter>Fichiers de ressources\Map Creator</Filter>
+    </ClInclude>
+    <ClInclude Include="0-Engine\DrawScreen.h">
+      <Filter>Fichiers de ressources\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="1-Map Creator\M_Engine.h">
+      <Filter>Fichiers de ressources\Map Creator</Filter>
+    </ClInclude>
+    <ClInclude Include="0-Engine\Terrain.h">
+      <Filter>Fichiers de ressources\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="1-Map Creator\UI_TilesMenu.h">
+      <Filter>Fichiers de ressources\Map Creator</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Fichiers de ressources\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationTest.h">
+      <Filter>Fichiers de ressources\Map Creator</Filter>
+    </ClInclude>
+    <ClInclude Include="2-Game\G_Engine.h">
+      <Filter>Fichiers de ressources\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
