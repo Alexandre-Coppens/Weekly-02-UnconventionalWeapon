@@ -75,9 +75,9 @@ void Cursor::Update(Vector2* scroll) {
 
 void Cursor::Draw(Vector2* scroll) {
 	rlPushMatrix();
-	rlTranslatef(0 - scroll->x, 25 * 50 - scroll->y, 0);
+	rlTranslatef(0 - scroll->x, 25 * Terrain::GetTileSize().x - scroll->y, 0);
 	rlRotatef(90, 1, 0, 0);
-	DrawGrid(100, 50);
+	DrawGrid(100, Terrain::GetTileSize().x);
 	rlPopMatrix();
 
 	DrawText(("X. " + to_string((scroll->x - GetMouseX()) / Terrain::GetTileSize().x)).c_str(), 10, 10, 20, GRAY);

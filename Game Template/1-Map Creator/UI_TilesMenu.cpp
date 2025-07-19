@@ -1,6 +1,7 @@
 #include "UI_TilesMenu.h"
 #include "AssetList.h"
 #include "Terrain.h"
+#include <iostream>
 
 UI_TilesMenu::UI_TilesMenu():
 Actor(Vector2{ 0, GetScreenHeight() * 0.375f },
@@ -15,10 +16,22 @@ UI_TilesMenu::~UI_TilesMenu(){
 void UI_TilesMenu::Update(Vector2* scroll){
 	//Change textures
 	if (GetMouseWheelMove() > 0){
-		mouseScroll = Clamp(mouseScroll - mouseScrollSpeed, 0, mouseScrollMax);
+		if (IsKeyDown(KEY_LEFT_CONTROL)) {
+			Terrain::SetTileSize(Vector2ClampValue(Vector2SubtractValue(Terrain::GetTileSize(), -2), 1, 500));
+			*scroll = Vector2Add(*scroll, Vector2Scale(Vector2Normalize(Vector2{ GetMousePosition().x - GetScreenWidth() * 0.5f, GetMousePosition().y - GetScreenHeight() * 0.5f }), Vector2Distance(GetMousePosition(), Vector2{ GetScreenWidth() * 0.5f,GetScreenHeight() * 0.5f }) * 0.2f));
+		}
+		else {
+			mouseScroll = Clamp(mouseScroll - mouseScrollSpeed, 0, mouseScrollMax);
+		}
 	}
 	if (GetMouseWheelMove() < 0) {
-		mouseScroll = Clamp(mouseScroll + mouseScrollSpeed, 0, mouseScrollMax);
+		if (IsKeyDown(KEY_LEFT_CONTROL)) {
+			Terrain::SetTileSize(Vector2ClampValue(Vector2SubtractValue(Terrain::GetTileSize(), 2), 1, 500));
+			*scroll = Vector2Add(*scroll, Vector2Scale(Vector2Normalize(Vector2{ GetMousePosition().x - GetScreenWidth() * 0.5f, GetMousePosition().y - GetScreenHeight()*0.5f }), Vector2Distance(GetMousePosition(), Vector2{GetScreenWidth()*0.5f,GetScreenHeight()*0.5f})*0.2f));
+		}
+		else {
+			mouseScroll = Clamp(mouseScroll + mouseScrollSpeed, 0, mouseScrollMax);
+		}
 	}
 }
 

@@ -20,7 +20,4 @@ void ATest::Update(Vector2* scroll){
 void ATest::Draw(Vector2* scroll){
 	Rectangle dest{ position.x - scroll->x, position.y - scroll->y, size.x, size.y };
 	DrawTexturePro(*texture, animation.GetAnimationRect(), dest, Vector2{size.x * 0.5f, size.y * 0.5f}, 0, color);
-	std::cout << animation.GetAnimationRect().x <<"\n";
-	std::cout << animation.GetAnimationRect().y <<"\n";
-	std::cout << "-------------------\n";
 }
